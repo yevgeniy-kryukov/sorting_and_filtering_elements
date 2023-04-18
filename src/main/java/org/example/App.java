@@ -2,11 +2,17 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class App {
+    public static List<String> stringsSortReverse(List<String> list) {
+        list.sort(Collections.reverseOrder());
+        return list;
+    }
+
     public static Integer[] sortArr1(Integer[] arr) {
         boolean repeat;
         do {
@@ -66,5 +72,7 @@ public class App {
         System.out.println(Arrays.toString(sortArr1(arrInt.clone())));
         System.out.println("sorted2:");
         System.out.println(Arrays.toString(sortArr2(arrInt.clone())));
+        System.out.println("stringsSortReverse:");
+        System.out.println(stringsSortReverse(new ArrayList<String>(Arrays.asList(arr))));
     }
 }
